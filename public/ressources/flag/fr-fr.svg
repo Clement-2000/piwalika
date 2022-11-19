@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="203.2mm"
+   height="135.46666mm"
+   viewBox="0 0 203.2 135.46666"
+   version="1.1"
+   id="svg5097"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="fr_fr.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5099"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.26771948"
+     inkscape:cx="388.46632"
+     inkscape:cy="128.86623"
+     inkscape:window-width="924"
+     inkscape:window-height="1016"
+     inkscape:window-x="996"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs5094" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.3999977,-115.25561)">
+    <g
+       id="g4491"
+       transform="matrix(3.6124444,0,0,3.6124444,572.51163,65.826662)">
+      <rect
+         width="56.25"
+         height="37.5"
+         fill="#ed2939"
+         id="rect882"
+         x="-157.54198"
+         y="13.682964"
+         style="stroke-width:0.0625" />
+      <rect
+         width="37.5"
+         height="37.5"
+         fill="#ffffff"
+         id="rect884"
+         x="-157.54198"
+         y="13.682964"
+         style="stroke-width:0.0625" />
+      <rect
+         width="18.75"
+         height="37.5"
+         fill="#002395"
+         id="rect886"
+         x="-157.54198"
+         y="13.682964"
+         style="stroke-width:0.0625" />
+    </g>
+  </g>
+</svg>

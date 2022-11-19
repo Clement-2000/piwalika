@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="parallax-section parallax-section-overlay section-separator" style="background-image:url(/ressources/samples/background_{{ random(1, 4) }}.jpg);">
+        <div class="parallax-section-header"></div>
+        <div class="parallax-section-content">
+        <object class="welcome-logo" data="/ressources/logo.svg" type="image/svg+xml"></object>
+            <p class="welcome-text">
+                Bougies parfumées et galets fondants à base de cire végétale aux parfums de Grasse
+            </p>
+        </div>
+    </div>
+        
+    <div class="section section-separator">
+        Test
+    </div>
+
+    <div class="parallax-section section-separator" style="background-image:url(/ressources/samples/detail.jpg);">
+    </div>
+
+    <div class="section">
+        Test
+    </div>
+{% endblock %}

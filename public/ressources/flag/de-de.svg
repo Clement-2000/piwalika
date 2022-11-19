@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="203.2mm"
+   height="135.46667mm"
+   viewBox="0 0 203.2 135.46667"
+   version="1.1"
+   id="svg4599"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="de_de.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4601"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.53543895"
+     inkscape:cx="343.64328"
+     inkscape:cy="111.12378"
+     inkscape:window-width="924"
+     inkscape:window-height="1016"
+     inkscape:window-x="996"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4596" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(69.1047,-131.43138)">
+    <g
+       id="g4486"
+       transform="matrix(3.2512,0,0,3.6124444,193.63597,160.08988)">
+      <rect
+         id="black_stripe"
+         width="62.5"
+         height="37.5"
+         y="-7.9332719"
+         x="-80.813446"
+         fill="#000000"
+         style="stroke-width:12.5" />
+      <rect
+         id="red_stripe"
+         width="62.5"
+         height="25"
+         y="4.5667281"
+         x="-80.813446"
+         fill="#dd0000"
+         style="stroke-width:12.5" />
+      <rect
+         id="gold_stripe"
+         width="62.5"
+         height="12.5"
+         y="17.066727"
+         x="-80.813446"
+         fill="#ffce00"
+         style="stroke-width:12.5" />
+    </g>
+  </g>
+</svg>
