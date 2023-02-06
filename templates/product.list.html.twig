@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="header-spacer">
+    </div>
+
+    <div class="section">
+        <ul class="section-container product-grid">
+            {% for i in 1..12 %}
+            <a href="{{ url('product.show', {slug: "jaaaj", id:10}) }}">
+                <li class="thumbnail-frame">
+                    <div class="thumbnail-frame-picture"><img src="/ressources/samples/candle.png" alt="Test"></div>
+                    <div class="thumbnail-frame-info">
+                        <div class="thumbnail-frame-title">Petite bougie parfumée Bonbon Mandarine</div>
+                        <div class="thumbnail-frame-price">10,00 €</div>
+                    </div>
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

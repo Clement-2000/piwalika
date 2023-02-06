@@ -2,3 +2,33 @@ home:
     path: /
     controller: App\Controller\HomeController::show
 
+product.list: 
+    path: produits
+    controller: App\Controller\ProductController::list
+
+product.show: 
+    path: produits/{slug}-{id}
+    controller: App\Controller\ProductController::show
+    requirements: 
+        slug: '[\w\-]+'
+        id: '\d+'
+
+admin.product.list:
+    path: admin/produits
+    controller: App\Controller\ProductController::adminList
+
+admin.product.add:
+    path: admin/produits/ajouter
+    controller: App\Controller\ProductController::adminAdd
+
+admin.product.edit:
+    path: admin/produits/modifier/{id}
+    controller: App\Controller\ProductController::adminEdit
+    requirements: 
+        id: '\d+'
+
+admin.product.delete:
+    path: admin/produits/supprimer/{id}
+    controller: App\Controller\ProductController::adminDelete
+    requirements: 
+        id: '\d+'

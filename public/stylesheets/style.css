@@ -2,6 +2,15 @@
 
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+a {
+    text-decoration: none;
+    color: #000000FF;
+}
+
+img {
+    display: block;
+}
+
 body {
     font-family: LatoWeb;
     font-size: 16px;
@@ -61,8 +70,6 @@ body * {
     padding: 5px;
     margin: 0 5px;
     text-align: center;
-    text-decoration: none;
-    color: #000000FF;
     font-family: LatoWebSemibold;
     height: 100%;
 }
@@ -183,6 +190,7 @@ body * {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .dark .section {
@@ -198,84 +206,156 @@ body * {
 }
 
 .section-container {
-    padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
 }
 
-.vehicle-container {
+.quantity-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1fr;
+}
+
+.quantity-counter-plus, .quantity-counter-minus, .quantity-counter-number {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.quantity-counter-number {
+    flex-grow: 1;
+}
+
+.quantity-counter-plus, .quantity-counter-minus {
+    aspect-ratio: 1;
+}
+
+.product-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
-.vehicle-info-container, .vehicle-history-container {
-    margin: 20px;
+.thumbnail-frame {
+    border: solid #000000FF 2px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.table {
-    table-layout: fixed;
-    width: 100%;
+.dark .thumbnail-frame {
+    border: solid #F5F5F5FF 2px;
+    color: #F5F5F5FF;
 }
 
-.table-auto {
-    table-layout: auto;
-}
-
-.vehicle-info-container {
-    grid-column-start: 1;
-    grid-column-end: span 2;
-}
-
-.table thead {
-    border-bottom: solid 2px black;
-    background: #C0C0C0FF;
-    font-family:  LatoWebSemiBold;
-}
-
-.dark .table thead {
-    border-bottom: solid 2px #F5F5F5FF;
-    background: #707070FF;
-}
-
-.table tbody tr:nth-child(even) {
+.thumbnail-frame:hover {
     background: #E0E0E0FF;
 }
 
-.dark .table tbody tr:nth-child(even) {
+.dark .thumbnail-frame:hover {
     background: #505050FF;
-    border-radius: 10px;
 }
 
-.table tbody tr td {
+.thumbnail-frame-picture {
+    aspect-ratio: 1;
+}
+
+.thumbnail-frame-picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-frame-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.thumbnail-frame-title {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    font-family: LatoWebSemiBold;
 }
 
-.vehicle-table tbody tr td {
-    text-align: left;
+.thumbnail-frame-price {
+    padding: 5px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    background-color: #C0C0C0FF;
+    font-family: LatoWebSemiBold;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
 }
 
-.vehicle-table tbody tr td:first-child {
-    text-align: right;
+.dark .thumbnail-frame-price {
+    background-color: #707070FF;
 }
 
-.table * tr *{
+.thumbnail-frame:hover .thumbnail-frame-price {
+    background: #000000FF;
+    color: #F5F5F5FF;
+}
+
+.dark .thumbnail-frame:hover .thumbnail-frame-price {
+    background: #F5F5F5FF;
+    color: #000000FF;
+}
+
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto 1fr;
+    border: solid 2px black;
+    padding: 20px;
+}
+
+.product-details-picture {
+    grid-row: 1 / span 4 ;
+}
+
+.product-details-title {
+    padding: 10px;
+}
+
+.product-details-info, .product-details-actions, .product-details-description {
     padding: 5px;
 }
 
-.map * {
-    position: static;
+.product-details-title {
+    font-family: LatoWebSemibold;
+    text-align: center;
+    font-size: 24px;
 }
 
-.map-section {
-    height: 100vh;
-    z-index: 1;
+.product-details-info, .product-details-actions {
+    display: flex;
+    justify-content: center;
 }
 
-.leaflet-top {
-    margin-top: 60px;
+.product-details-price, .product-details-quantity-available, .product-details-action-add-to-cart, .product-details-action-buy {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    font-size: 18px;
 }
 
-.leaflet-control-attribution {
-    display: none;
+.in-stock {
+    color: green;
 }

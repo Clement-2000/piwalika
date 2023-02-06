@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="header-spacer">
+    </div>
+
+    <div class="section">
+        <div class="section-container product-details">
+            <div class="product-details-picture"><img src="/ressources/samples/candle.png" alt="Test"></div>
+            <div class="product-details-title">Petite bougie parfumée Bonbon Mandarine</div>
+
+            <div class="product-details-info">
+                <div class="product-details-price">10,00 €</div>
+                <div class="product-details-quantity-available in-stock">3 en stock</div>
+            </div>
+
+            <div class="product-details-actions">
+                <div class="quantity-counter" id="quantity-counter">
+                    <div class="quantity-counter-plus" id="plus">+</div>
+                    <div class="quantity-counter-number" id="number">1</div>
+                    <div class="quantity-counter-minus" id="minus">-</div>
+                </div>
+
+                <a class="product-details-action-add-to-cart">Ajouter au panier</a>
+                <a class="product-details-action-buy">Acheter</a>
+            </div>
+
+            <div class="product-details-description">
+                Petite bougie parfumée Bonbon Mandarine
+            </div>
+        </div>
+    </div>
+{% endblock %}

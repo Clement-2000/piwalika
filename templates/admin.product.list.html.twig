@@ -1,0 +1,46 @@
+{% extends "admin_base.html.twig" %}
+
+{% block content %}
+    <h1>Produits</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        {% for product in products %}
+            <div class="col">
+                <div class="card">
+                    <img src="/ressources/samples/candle.png" class="card-img-top" alt="Test">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ (product.price/100)|format_currency("EUR", {"multiplier": 1/10}, locale="fr") }}</li>
+                            <li class="list-group-item">
+                                {% if product.availableQuantity > 0 %}
+                                    <span class="badge text-bg-success">{{ product.availableQuantity }} en stock</span>
+                                {% else %}
+                                    <span class="badge text-bg-danger">0 en stock</span>
+                                {% endif %}
+                                {% if product.isVisible %}
+                                    <span class="badge text-bg-primary">Visible</span>
+                                {% else %}
+                                    <span class="badge text-bg-secondary">Invisible</span>
+                                {% endif %}
+                            </li>
+                            <li class="list-group-item">
+                                <div class="btn-group d-flex justify-content-center" role="group">
+                                    <a href="{{ url('admin.product.edit', {'id': product.id}) }}" class="btn btn-secondary">Modifier</a>
+                                    <a href="{{ url('admin.product.delete', {'id': product.id}) }}" class="btn btn-outline-danger">Supprimer</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <a href="{{ url('admin.product.add') }}" class="btn btn-primary">Ajouter</a>
+
+{% endblock %}
