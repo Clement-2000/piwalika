@@ -59,6 +59,17 @@ class ProductRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findAllAvailable(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.visible = true')
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Product[] Returns an array of Product objects
 //     */

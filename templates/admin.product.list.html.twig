@@ -13,7 +13,7 @@
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ (product.price/100)|format_currency("EUR", {"multiplier": 1/10}, locale="fr") }}</li>
+                            <li class="list-group-item">{{ (product.price/100)|format_currency("EUR", locale="fr") }}</li>
                             <li class="list-group-item">
                                 {% if product.availableQuantity > 0 %}
                                     <span class="badge text-bg-success">{{ product.availableQuantity }} en stock</span>

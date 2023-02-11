@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\String\Slugger\AsciiSlugger;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
@@ -27,6 +28,8 @@ class Product
 
     #[ORM\Column]
     private ?bool $visible = null;
+
+    private AsciiSlugger $slugger;
 
     public function getId(): ?int
     {
@@ -91,5 +94,12 @@ class Product
         $this->visible = $visible;
 
         return $this;
+    }
+
+    public function getSlug(): string
+    {
+        $this->slugger = new AsciiSlugger();
+        
+        return $this->slugger->slug($this->getName())->lower()->toString();
     }
 }

@@ -6,13 +6,13 @@
 
     <div class="section">
         <ul class="section-container product-grid">
-            {% for i in 1..12 %}
-            <a href="{{ url('product.show', {slug: "jaaaj", id:10}) }}">
+            {% for product in products %}
+            <a href="{{ url('product.show', {slug:product.slug, id:product.id}) }}">
                 <li class="thumbnail-frame">
-                    <div class="thumbnail-frame-picture"><img src="/ressources/samples/candle.png" alt="Test"></div>
+                    <div class="thumbnail-frame-picture"><img src="/ressources/samples/candle.png" alt="{{ product.name }} image"></div>
                     <div class="thumbnail-frame-info">
-                        <div class="thumbnail-frame-title">Petite bougie parfumée Bonbon Mandarine</div>
-                        <div class="thumbnail-frame-price">10,00 €</div>
+                        <div class="thumbnail-frame-title">{{ product.name }}</div>
+                        <div class="thumbnail-frame-price">{{ (product.price/100)|format_currency("EUR", locale="fr") }}</div>
                     </div>
                 </li>
             </a>

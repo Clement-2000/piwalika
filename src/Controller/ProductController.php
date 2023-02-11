@@ -23,8 +23,11 @@ class ProductController extends AbstractController
 
     public function list(): Response
     {
+        $products = $this->product_repository->findAllAvailable();
+        
         return $this->render("product.list.html.twig", [
-            "section" => "products"
+            "section" => "products",
+            "products" => $products
         ]);
     }
 
